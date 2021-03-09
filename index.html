@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="main">
+      <form action="get">
+        <fieldset>
+          <legend>New Expense</legend>
+          <div>
+            <label>Date</label>
+            <div>
+              <input type="datetime-local" />
+            </div>
+          </div>
+          <br />
+          <div>
+            <label>Expense Name</label>
+            <div>
+              <input type="text" />
+            </div>
+          </div>
+          <br />
+          <div>
+            <label>Vendor</label>
+            <div>
+              <input type="text" />
+            </div>
+          </div>
+          <br />
+          <div>
+            <label>Expense Type</label>
+          </div>
+          <div>
+            <input list="expense-list" type="text" />
+            <datalist id="expense-list">
+              <option value="Cash"></option>
+              <option value="Credit"></option>
+              <option value="Debit"></option>
+              <option value="Check"></option>
+              <option value="Venmo"></option>
+              <option value="Other"></option>
+            </datalist>
+          </div>
+          <br />
+          <div>
+            <label>Amount</label>
+            <div>
+              <input type="number" />
+            </div>
+          </div>
+          <br />
+          <div>
+            <label>Description</label>
+            <div>
+              <input type="text" />
+            </div>
+          </div>
+          <div>
+              <button class="submit">
+                  Submit
+              </button>
+          </div>
+        </fieldset>
+      </form>
+    </header>
+    <div class="container">
+      <table class="tracker">
+        <tr>
+          <th class="tableHeader">Date</th>
+          <th class="tableHeader">Expense</th>
+          <th class="tableHeader">Vendor</th>
+          <th class="tableHeader">Type</th>
+          <th class="tableHeader">Amount</th>
+          <th class="tableHeader">Description</th>
+        </tr>
+        <template class="template" id="rowTemplate">
+          <tr>
+            <tr>
+                <td class="lineItem
+                " id="date">Date</td>
+                <td class="lineItem
+                "id="name">Expense</td>
+                <td class="lineItem
+                "id="vendor">Vendor</td>
+                <td class="lineItem
+                "id="type">Type</td>
+                <td class="lineItem
+                "id="amount">Amount</td>
+                <td class="lineItem
+                "id="description">Description</td>
+              </tr>
+          </tr>
+        </template>
+      </table>
+    </div>
+  </body>
+</html>

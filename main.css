@@ -1,0 +1,19 @@
+body {
+  font-weight: bold;
+  color: rgb(55, 72, 126);
+}
+h1,
+h2 {
+  color: ghostwhite;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+table {
+  background-color: gray;
+  border: 2px solid;
+  border-color: aliceblue;
+  empty-cells: show;
+}
