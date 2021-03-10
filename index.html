@@ -10,34 +10,29 @@
   </head>
   <body>
     <header class="main">
-      <form action="get">
-        <fieldset>
-          <legend>New Expense</legend>
-          <div>
-            <label>Date</label>
-            <div>
-              <input type="datetime-local" />
-            </div>
-          </div>
-          <br />
-          <div>
-            <label>Expense Name</label>
-            <div>
-              <input type="text" />
-            </div>
-          </div>
-          <br />
-          <div>
-            <label>Vendor</label>
-            <div>
-              <input type="text" />
-            </div>
-          </div>
-          <br />
-          <div>
-            <label>Expense Type</label>
-          </div>
-          <div>
+      <fieldset>
+        <legend>New Expense</legend>
+        <div>
+          <label>
+            Date
+            <input type="datetime-local" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Expense Name
+            <input type="text" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Vendor
+            <input type="text" />
+          </label>
+        </div>
+        <div>
+          <label
+            >Expense Type
             <input list="expense-list" type="text" />
             <datalist id="expense-list">
               <option value="Cash"></option>
@@ -47,28 +42,22 @@
               <option value="Venmo"></option>
               <option value="Other"></option>
             </datalist>
-          </div>
-          <br />
-          <div>
-            <label>Amount</label>
-            <div>
-              <input type="number" />
-            </div>
-          </div>
-          <br />
-          <div>
-            <label>Description</label>
-            <div>
-              <input type="text" />
-            </div>
-          </div>
-          <div>
-              <button class="submit">
-                  Submit
-              </button>
-          </div>
-        </fieldset>
-      </form>
+          </label>
+        </div>
+        <div>
+          <label>
+            Amount
+            <input type="number" contenteditable="true" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Description
+            <input type="text" />
+          </label>
+        </div>
+        <button class="submit">Submit</button>
+      </fieldset>
     </header>
     <div class="container">
       <table class="tracker">
@@ -82,20 +71,12 @@
         </tr>
         <template class="template" id="rowTemplate">
           <tr>
-            <tr>
-                <td class="lineItem
-                " id="date">Date</td>
-                <td class="lineItem
-                "id="name">Expense</td>
-                <td class="lineItem
-                "id="vendor">Vendor</td>
-                <td class="lineItem
-                "id="type">Type</td>
-                <td class="lineItem
-                "id="amount">Amount</td>
-                <td class="lineItem
-                "id="description">Description</td>
-              </tr>
+            <td class="lineItem" id="date">Date</td>
+            <td class="lineItem" id="name">Expense</td>
+            <td class="lineItem" id="vendor">Vendor</td>
+            <td class="lineItem" id="type">Type</td>
+            <td class="lineItem" id="amount">Amount</td>
+            <td class="lineItem" id="description">Description</td>
           </tr>
         </template>
       </table>
