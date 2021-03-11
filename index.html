@@ -9,31 +9,32 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <header class="main">
+    <main>
+      <h1>Big Money Budget</h1>
       <fieldset>
         <legend>New Expense</legend>
         <div>
           <label>
             Date
-            <input type="datetime-local" />
+            <input type="datetime-local" name="date" />
           </label>
         </div>
         <div>
           <label>
             Expense Name
-            <input type="text" />
+            <input type="text" name="name" />
           </label>
         </div>
         <div>
           <label>
             Vendor
-            <input type="text" />
+            <input type="text" class="vendor" />
           </label>
         </div>
         <div>
           <label
             >Expense Type
-            <input list="expense-list" type="text" />
+            <input list="expense-list" type="text" class="type" />
             <datalist id="expense-list">
               <option value="Cash"></option>
               <option value="Credit"></option>
@@ -47,18 +48,20 @@
         <div>
           <label>
             Amount
-            <input type="number" contenteditable="true" />
+            <input type="number" contenteditable="true" class="amount" />
           </label>
         </div>
         <div>
           <label>
             Description
-            <input type="text" />
+            <input type="text" class="description" />
           </label>
         </div>
-        <button class="submit">Submit</button>
+        <div>
+          <button class="submit">Submit</button>
+        </div>
       </fieldset>
-    </header>
+    </main>
     <div class="container">
       <table class="tracker">
         <tr>
@@ -71,14 +74,22 @@
         </tr>
         <template class="template" id="rowTemplate">
           <tr>
-            <td class="lineItem" id="date">Date</td>
-            <td class="lineItem" id="name">Expense</td>
-            <td class="lineItem" id="vendor">Vendor</td>
-            <td class="lineItem" id="type">Type</td>
-            <td class="lineItem" id="amount">Amount</td>
-            <td class="lineItem" id="description">Description</td>
+            <td class="lineItem" id="date"></td>
+            <td class="lineItem" id="name"></td>
+            <td class="lineItem" id="vendor"></td>
+            <td class="lineItem" id="type"></td>
+            <td class="lineItem" id="amount"></td>
+            <td class="lineItem" id="description"></td>
           </tr>
         </template>
+        <tr>
+          <td class="lineItem" id="date">Date</td>
+          <td class="lineItem" id="name">Expense</td>
+          <td class="lineItem" id="vendor">Vendor</td>
+          <td class="lineItem" id="type">Type</td>
+          <td class="lineItem" id="amount">Amount</td>
+          <td class="lineItem" id="description">Description</td>
+        </tr>
       </table>
     </div>
   </body>
