@@ -29,7 +29,7 @@ fieldset {
   justify-content: center;
   border: 4px solid rgb(0, 10, 66);
 }
-button {
+.submit {
   font-size: 1.1rem;
   font-weight: bold;
   border: none;
@@ -77,4 +77,16 @@ button:hover {
   background-color: #7cb9e4ea;
   transform: scale(1.025);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+img {
+  height: 32px;
+  width: 32px;
+}
+.delete {
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  margin-top: 2px;
+  margin-left: auto;
+  padding: 1px;
 }

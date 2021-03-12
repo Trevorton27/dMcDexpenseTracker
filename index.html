@@ -16,25 +16,25 @@
         <div>
           <label>
             Date
-            <input type="datetime-local" name="date" />
+            <input type="datetime-local" class="dateInput" required />
           </label>
         </div>
         <div>
           <label>
             Expense Name
-            <input type="text" name="name" />
+            <input type="text" class="nameInput" required />
           </label>
         </div>
         <div>
           <label>
             Vendor
-            <input type="text" class="vendor" />
+            <input type="text" class="vendorInput" required />
           </label>
         </div>
         <div>
           <label
             >Expense Type
-            <input list="expense-list" type="text" class="type" />
+            <input list="expense-list" type="text" class="typeInput" required />
             <datalist id="expense-list">
               <option value="Cash"></option>
               <option value="Credit"></option>
@@ -48,13 +48,13 @@
         <div>
           <label>
             Amount
-            <input type="number" contenteditable="true" class="amount" />
+            <input type="number" class="amountInput" required />
           </label>
         </div>
         <div>
           <label>
             Description
-            <input type="text" class="description" />
+            <input type="text" class="descriptionInput" required />
           </label>
         </div>
         <div>
@@ -63,7 +63,7 @@
       </fieldset>
     </main>
     <div class="container">
-      <table class="tracker">
+      <table class="theTable">
         <tr>
           <th class="tableHeader">Date</th>
           <th class="tableHeader">Expense</th>
@@ -71,25 +71,25 @@
           <th class="tableHeader">Type</th>
           <th class="tableHeader">Amount</th>
           <th class="tableHeader">Description</th>
+          <th class="tableHeader">Delete</th>
         </tr>
         <template class="template" id="rowTemplate">
           <tr>
-            <td class="lineItem" id="date"></td>
-            <td class="lineItem" id="name"></td>
-            <td class="lineItem" id="vendor"></td>
-            <td class="lineItem" id="type"></td>
-            <td class="lineItem" id="amount"></td>
-            <td class="lineItem" id="description"></td>
+            <td class="lineItem" id="dateTemp" contenteditable="true"></td>
+            <td class="lineItem" id="nameTemp" contenteditable="true"></td>
+            <td class="lineItem" id="vendorTemp" contenteditable="true"></td>
+            <td class="lineItem" id="typeTemp" contenteditable="true"></td>
+            <td class="lineItem" id="amountTemp" contenteditable="true"></td>
+            <td
+              class="lineItem"
+              id="descriptionTemp"
+              contenteditable="true"
+            ></td>
+            <td class="delete">
+              <img src="images/flame.svg" class="deleteImg" />
+            </td>
           </tr>
         </template>
-        <tr>
-          <td class="lineItem" id="date">Date</td>
-          <td class="lineItem" id="name">Expense</td>
-          <td class="lineItem" id="vendor">Vendor</td>
-          <td class="lineItem" id="type">Type</td>
-          <td class="lineItem" id="amount">Amount</td>
-          <td class="lineItem" id="description">Description</td>
-        </tr>
       </table>
     </div>
   </body>
