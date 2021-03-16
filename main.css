@@ -1,9 +1,8 @@
-@media only screen and (max-width: 768px) {
-  table {
-    width: 90%;
-  }
-}
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: start;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   color: rgb(55, 72, 126);
@@ -15,6 +14,9 @@ h2 {
   color: rgb(8, 8, 209);
   text-align: center;
 }
+h1 {
+  font-size: 2.4em;
+}
 main {
   display: flex;
   flex-direction: column;
@@ -22,28 +24,39 @@ main {
 }
 legend {
   font-size: 1.25rem;
+  margin-bottom: 0.35em;
 }
 fieldset {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   border: 4px solid rgb(0, 10, 66);
+  border-radius: 4px;
+}
+input,
+label {
+  display: block;
+  flex-wrap: wrap;
+}
+label {
+  top: 0;
+  font-size: 0.9em;
+}
+input {
+  font-size: 0.9em;
+  box-sizing: border-box;
+  width: 94%;
 }
 .submit {
   font-size: 1.1rem;
   font-weight: bold;
   border: none;
-  margin-top: 12px;
-  margin-left: auto;
+  margin-top: 1.25em;
 }
 .container {
   margin-block: 5px;
 }
 table {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border-collapse: collapse;
   width: 200px;
   height: auto;
@@ -51,6 +64,7 @@ table {
   box-shadow: 2px 2px 2px 2px rbga(0, 0, 0, 0.35);
   min-width: 56%;
   width: auto;
+  margin-inline: auto;
 }
 th {
   font-size: 1.05rem;
@@ -61,9 +75,25 @@ tr {
   transition: all 0.2s ease-in;
   cursor: pointer;
 }
-
-th,
 td {
+  font-size: 0.92em;
+  max-width: 16ch;
+  padding-inline: 2px;
+
+  text-overflow: auto;
+  white-space: wrap;
+  overflow: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+#dateTemp {
+  font-size: 0.85em;
+  width: 8ch;
+}
+#amountTemp::before {
+  content: "$";
+}
+th {
   padding: 0.25rem;
   text-align: center;
   border-bottom: 2px solid rgb(160, 160, 160);
@@ -83,10 +113,8 @@ img {
   width: 32px;
 }
 .delete {
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
-  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   margin-left: auto;
-  padding: 1px;
 }

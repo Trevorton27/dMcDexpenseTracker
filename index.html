@@ -13,28 +13,35 @@
       <h1>Big Money Budget</h1>
       <fieldset>
         <legend>New Expense</legend>
-        <div>
-          <label>
-            Date
-            <input type="datetime-local" class="dateInput" required />
-          </label>
-        </div>
-        <div>
-          <label>
-            Expense Name
-            <input type="text" class="nameInput" required />
-          </label>
-        </div>
-        <div>
-          <label>
-            Vendor
-            <input type="text" class="vendorInput" required />
-          </label>
-        </div>
-        <div>
-          <label
-            >Expense Type
-            <input list="expense-list" type="text" class="typeInput" required />
+        <section id="right">
+          <div>
+            <label for="dateInput">Date</label>
+            <input
+              id="dateInput"
+              type="datetime-local"
+              class="dateInput"
+              required
+            />
+          </div>
+          <div>
+            <label for="nameInput">Expense Name</label>
+            <input id="nameInput" type="text" class="nameInput" required />
+          </div>
+          <div>
+            <label for="vendorInput">Vendor</label>
+            <input id="vendorInput" type="text" class="vendorInput" required />
+          </div>
+        </section>
+        <section id="left">
+          <div>
+            <label for="typeInput">Expense Type</label>
+            <input
+              id="typeInput"
+              list="expense-list"
+              type="text"
+              class="typeInput"
+              required
+            />
             <datalist id="expense-list">
               <option value="Cash"></option>
               <option value="Credit"></option>
@@ -43,20 +50,26 @@
               <option value="Venmo"></option>
               <option value="Other"></option>
             </datalist>
-          </label>
-        </div>
-        <div>
-          <label>
-            Amount
-            <input type="number" class="amountInput" required />
-          </label>
-        </div>
-        <div>
-          <label>
-            Description
-            <input type="text" class="descriptionInput" required />
-          </label>
-        </div>
+          </div>
+          <div>
+            <label for="amountInput">Amount</label>
+            <input
+              id="amountInput"
+              type="number"
+              class="amountInput"
+              required
+            />
+          </div>
+          <div>
+            <label for="descriptionInput">Description</label>
+            <input
+              id="descriptionInput"
+              type="text"
+              class="descriptionInput"
+              required
+            />
+          </div>
+        </section>
         <div>
           <button class="submit">Submit</button>
         </div>
