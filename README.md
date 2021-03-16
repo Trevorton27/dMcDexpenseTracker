@@ -1,7 +1,7 @@
 # Big Money Expense Tracker
 A Javascript tracker with HTML table element. 
 
-view <a href="https://duanemcd.github.io/expense-tracker/"> to-do app</a>!
+view <a href="https://duanemcd.github.io/expense-tracker/"> Expense Tracker</a>!
 
 ## Summary
 A simple to-do application. Handcoded and simple to keep distactions low and True Productivity high!
