@@ -15,13 +15,6 @@ const APP = {
         });
     }
 }
-function dateTimeDisplay() {
-    const dateTime = new Date();
-    dateTime.setMinutes(dateTime.getMinutes() - dateTime.getTimezoneOffset());
-    dateTime.setMilliseconds(null);
-    dateTime.setSeconds(null);
-    document.querySelector('.dateInput').value = dateTime.toISOString().slice(0, -1);
-}
 function resetInputs (){
     dateTimeDisplay();
     APP.expName.value = "";
@@ -30,12 +23,17 @@ function resetInputs (){
     APP.amount.value = "";
     APP.description.value = "";
 }
+function dateTimeDisplay() {
+    const dateTime = new Date();
+    dateTime.setMinutes(dateTime.getMinutes() - dateTime.getTimezoneOffset());
+    dateTime.setMilliseconds(null);
+    dateTime.setSeconds(null);
+    document.querySelector('.dateInput').value = dateTime.toISOString().slice(0, -1);
+}
 function createExpenseRow () {
-    i = APP.table.rowIndex
     const template = document.querySelector('template');
     const content = template.content.cloneNode(true)
-    expDate = new Date(APP.date.value);
-    content.querySelector('#dateTemp').textContent = expDate.toLocaleDateString([], {year: 'numeric', month: 'numeric', day: 'numeric'})+"\n"+expDate.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+    content.querySelector('#dateTemp').textContent = formatExpTime();
     content.querySelector('#nameTemp').textContent = APP.expName.value
     content.querySelector('#vendorTemp').textContent = APP.vendor.value
     content.querySelector('#typeTemp').textContent = APP.type.value
@@ -46,7 +44,12 @@ function createExpenseRow () {
     })
     APP.table.append(content);
     resetInputs();
-}    
+} 
+function formatExpTime () {
+    expDate = new Date(APP.date.value);
+    date = expDate.toLocaleDateString([], {year: 'numeric', month: 'numeric', day: 'numeric'})+"\n"+expDate.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+    return date;
+}   
 function deleteExpense (e) {
     APP.table.deleteRow(e.target.closest('tr').rowIndex);
 }
