@@ -6,6 +6,8 @@ view <a href="https://duanemcd.github.io/expense-tracker/"> Expense Tracker</a>!
 ## Summary
 A simple expense application. Handcoded and simple to keep distactions low and accuracy high!
 
+![screenshot](screenshot.png)
+
 ##Features
 <ul>
   <li>6 factor Tracking!</li>
