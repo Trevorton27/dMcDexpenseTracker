@@ -39,7 +39,7 @@ label {
   flex-wrap: wrap;
 }
 label {
-  top: 0;
+  margin-top: 6px;
   font-size: 0.9em;
 }
 input {
@@ -51,12 +51,18 @@ input {
   font-size: 1.1rem;
   font-weight: bold;
   border: none;
-  margin-top: 1.25em;
+  border-radius: 5px;
+  margin-top: 3em;
+  margin-left: 1em;
+  padding: 7px;
+  background-color: #0808d1;
+  color: #fff;
 }
 .container {
   margin-block: 5px;
 }
 table {
+  margin-top: 5%;
   border-collapse: collapse;
   width: 200px;
   height: auto;
@@ -65,6 +71,7 @@ table {
   min-width: 56%;
   width: auto;
   margin-inline: auto;
+  text-align: center;
 }
 th {
   font-size: 1.05rem;
@@ -79,7 +86,7 @@ td {
   font-size: 0.92em;
   max-width: 16ch;
   padding-inline: 2px;
-
+  padding-left: 5px;
   text-overflow: auto;
   white-space: wrap;
   overflow: auto;
@@ -91,7 +98,7 @@ td {
   width: 8ch;
 }
 #amountTemp::before {
-  content: "$";
+  content: '$';
 }
 th {
   padding: 0.25rem;
@@ -103,10 +110,12 @@ tr:hover {
   transform: scale(1.025);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.2);
 }
+
 button:hover {
   background-color: #7cb9e4ea;
   transform: scale(1.025);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 img {
   height: 32px;
